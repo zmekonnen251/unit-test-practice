@@ -1,6 +1,6 @@
 const { expect } = require('@jest/globals');
 const { ERROR } = require('jest-validate/build/utils');
-const { stringLength } = require('./util');
+const { stringLength, reverseString } = require('./util');
 
 test('Should output character count of the string', () => {
   const length = stringLength('zelale');
@@ -17,4 +17,9 @@ test('should input string be at most ten character', () => {
   expect(() => {
     stringLength('Hsadfasdfasdfasdfasdfasfdasdf');
   }).toThrow();
+});
+
+test('should reverse the string ', () => {
+  const output = reverseString('Zelalem');
+  expect(output).toBe('melaleZ');
 });

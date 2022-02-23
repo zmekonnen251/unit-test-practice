@@ -5,3 +5,7 @@ exports.stringLength = (string) => {
     throw 'String has to be at least 1 character and at most 10!';
   }
 };
+
+exports.reverseString = (string) => {
+  return string.split('').reverse().join('');
+};
